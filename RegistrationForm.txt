@@ -18,28 +18,31 @@ l1.grid(row=3,column=1,padx= 5, pady= 8)
 l2.grid(row=2,column=1,padx= 5, pady= 8)
 l3.grid(row=4,column=1,padx= 5, pady= 8)
 l4.grid(row=5,column=1,padx= 5, pady= 8)
-
+def temp_text(e):
+    e1.delete(0,"end")
+def temp_text2(e):
+    e2.delete(0,"end")
+def temp_text3(e):
+    e3.delete(0,"end")
+def temp_text4(e):
+    e4.delete(0,"end")
 e1=Entry(root)
 e1.insert(0, "eg. shakir")
 e1.grid(row=2,column=2,padx= 5, pady= 8)
-def temp_text(e):
-    e1.delete(0,"end")
-    e2.delete(0,"end")
-    e3.delete(0,"end")
-    e4.delete(0,"end")
+
 e1.bind("<FocusIn>",temp_text)
 
 e2=Entry(root)
 e2.insert(0, "eg. shakir@abc.com")
-e2.bind("<FocusIn>",temp_text)
+e2.bind("<FocusIn>",temp_text2)
 e2.grid(row=3,column=2,padx= 5, pady= 8)
 e3=Entry(root)
 e3.insert(0, "eg.9875425125 ")
-e3.bind("<FocusIn>",temp_text)
+e3.bind("<FocusIn>",temp_text3)
 e3.grid(row=4,column=2,padx= 5, pady= 8)
 e4=Entry(root)
 e4.insert(0, "eg.1 park street")
-e4.bind("<FocusIn>",temp_text)
+e4.bind("<FocusIn>",temp_text4)
 e4.grid(row=5,column=2,padx= 5, pady= 8)
 def submit():
     name = e1.get()
@@ -62,5 +65,8 @@ def submit():
     e2.delete(0,"end")
     e3.delete(0,"end")
     e4.delete(0,"end")
-mybut=Button(root,text="Submit",command=submit).grid(row=6,column=2,padx= 5, pady= 8)
+mybut=Button(root,text="Submit",command=submit).grid(row=6,column=2,
+padx= 5, pady= 8)
 root.mainloop()
+#Github link
+#https://github.com/Preamerboy/PyrthonDevelopmen.git
